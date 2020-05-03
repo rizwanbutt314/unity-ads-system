@@ -16,4 +16,4 @@ class AdsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AdsData
-        fields = ('id', 'bundle_id', 'image_url', 'active', 'image_link', 'hit_link', 'ready')
+        fields = ('id', 'bundle_id', 'image_url', 'active', 'image_link', 'hit_link')

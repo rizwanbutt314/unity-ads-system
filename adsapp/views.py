@@ -4,11 +4,17 @@ from .serializers import AdsData, AdsSerializer
 
 # Create your views here.
 class AdsListingAPIIndex(mixins.ListModelMixin,
-                generics.GenericAPIView):
+                         generics.GenericAPIView):
     serializer_class = AdsSerializer
 
     def get_queryset(self):
-        return AdsData.objects.all()
+        queryset = AdsData.objects.select_related('category')
+        category = self.request.GET.get('category')
+
+        if category:
+            return queryset.filter(category__name=category)
+
+        return queryset
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
