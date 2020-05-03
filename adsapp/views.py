@@ -3,9 +3,7 @@ from .serializers import AdsData, AdsSerializer
 
 
 # Create your views here.
-class APIDetail(mixins.RetrieveModelMixin,
-                mixins.UpdateModelMixin,
-                mixins.DestroyModelMixin,
+class AdsListingAPIIndex(mixins.ListModelMixin,
                 generics.GenericAPIView):
     serializer_class = AdsSerializer
 
@@ -13,4 +11,4 @@ class APIDetail(mixins.RetrieveModelMixin,
         return AdsData.objects.all()
 
     def get(self, request, *args, **kwargs):
-        return self.retrieve(request, *args, **kwargs)
+        return self.list(request, *args, **kwargs)

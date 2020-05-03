@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     # Third-Party Apps
     'rest_framework',
     'rest_framework.authtoken',
-    # 'django_dropbox_storage',
 
     # Project Apps
     'adsapp',
