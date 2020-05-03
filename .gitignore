@@ -1,0 +1,7 @@
+.idea/
+venv3/
+MEDIA/
+staticfiles/
+
+nohup.out
+*.pyc
