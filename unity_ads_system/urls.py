@@ -6,8 +6,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # Admin panel settings
-admin.site.site_title = "Unity Ads System Panel"
-admin.site.site_header = "Unity Ads System"
+admin.site.site_title = "Cross Promotion Ads System"
+admin.site.site_header = "Cross Promotion Ads System"
 admin.site.index_title = 'Administration'
 admin.site.unregister(User)
 admin.site.unregister(Group)
