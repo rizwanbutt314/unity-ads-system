@@ -23,11 +23,11 @@ class AdsData(models.Model):
         blank=True,
         help_text="Bundle ID")
     active = models.BooleanField(default=False)
-    hit_link = models.TextField(
-        max_length=255,
-        help_text="Hit link")
     photo = models.ImageField(upload_to='photos', storage=fs)
     uploaded_on = models.DateTimeField(auto_now_add=True)
+    ads_hit_count = models.IntegerField(
+        default=0,
+        help_text="Ads hit count")
     category = models.ForeignKey(
         'adsapp.AdCategory',
         null=True,

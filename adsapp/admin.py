@@ -4,7 +4,7 @@ from adsapp.models import AdsData, AdCategory
 
 # # Register your models here.
 class AdsDataAdmin(admin.ModelAdmin):
-    list_display = ('id', 'bundle_id', 'active', 'uploaded_on', 'category_name')
+    list_display = ('id', 'bundle_id', 'active', 'uploaded_on', 'ads_hit_count', 'category_name')
 
     def category_name(self, instance):
         if instance.category:

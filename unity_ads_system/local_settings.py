@@ -4,7 +4,7 @@
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ads-listing',
+        'NAME': 'ads_listing',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
